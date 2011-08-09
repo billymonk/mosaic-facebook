@@ -1,3 +1,3 @@
 module MosaicFacebook
-  # Your code goes here...
+  
 end
