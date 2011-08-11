@@ -1,1 +1,1 @@
-require 'lib/mosaic_facebook'
+require File.dirname(__FILE__) + '/lib/mosaic_facebook'

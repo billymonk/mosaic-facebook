@@ -1,3 +1,1 @@
-module MosaicFacebook
-  
-end
+require 'mosaic/facebook/version'
