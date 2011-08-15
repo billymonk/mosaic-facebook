@@ -1,1 +1,1 @@
-require 'mosaic/facebook/version'
+require 'mosaic/facebook'
