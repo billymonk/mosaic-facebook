@@ -4,7 +4,7 @@ require "mosaic/facebook/version"
 
 Gem::Specification.new do |s|
   s.name        = "mosaic_facebook"
-  s.version     = MosaicFacebook::VERSION
+  s.version     = Mosaic::Facebook::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Ajit Singh"]
   s.email       = ["ajit.singh@mosaic.com"]

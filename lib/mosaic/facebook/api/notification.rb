@@ -8,7 +8,7 @@ module Mosaic
 
         # send_email requires these parameters: to, subject, body, access_token
         def send_email(options)
-          response = self.get("/method/notifications.sendEmail", :query => options)
+          response = query("/method/notifications.sendEmail", options)
           raise Mosaic::Facebook::Error.new(response['error_response']) if response.include?('error_response')
           response
         end
