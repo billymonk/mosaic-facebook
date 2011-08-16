@@ -1,3 +1,5 @@
+require 'httparty'
+
 module Mosaic
   module Facebook
     class Object

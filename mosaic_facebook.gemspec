@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = ""
   s.summary     = %q{gem/plugin to connect to facebook graph api}
   s.description = %q{small app written and improved over time to solve our need to connect and fetch data from facebook}
-  s.add_dependency("httparty")
+  s.add_dependency "httparty"
   s.rubyforge_project = "mosaic_facebook"
 
   s.files         = `git ls-files`.split("\n")
