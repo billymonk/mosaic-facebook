@@ -1,4 +1,4 @@
-require 'mosaic/facebook/fql/error'
+require 'mosaic/facebook/error'
 
 module Mosaic
   module Facebook
@@ -53,7 +53,7 @@ module Mosaic
 
           def find_by_fql(*args)
             response = query('/method/fql.query', :query => build_fql(*args))
-            raise Mosaic::Facebook::Fql::Error.new(response['error_response']) if response.include?('error_response')
+            raise Mosaic::Facebook::Error.new(response['error_response']) if response.include?('error_response')
             response
           end
 

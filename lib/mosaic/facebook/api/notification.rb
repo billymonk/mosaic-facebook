@@ -1,4 +1,4 @@
-require 'mosaic/facebook/fql/error'
+require 'mosaic/facebook/error'
 
 module Mosaic
   module Facebook

@@ -32,25 +32,25 @@ module Mosaic
         end
 
         def configuration_from_file
-          YAML.load_file(configuration_file)
+          YAML.load_file(configuration_file) rescue nil
         end
 
         def facebook_access_token
-          @facebook_access_token ||= configuration['access_token']
+          @facebook_access_token ||= configuration && configuration['access_token']
         end
 
         def facebook_user
           @facebook_user ||= configuration['user']
         end
-
+#@logger ||= defined?(Rails.logger) ? Rails.logger : Logger.new
         def query(path, options)
           result = nil
-          ms = Benchmark.ms { result = self.get(path, :query => ( options[:access_token].blank? ? options.reverse_merge(:access_token => facebook_access_token) : options )) }
-          Rails.logger.debug "#{self.name} #{path} (%.1fms)  #{options.inspect}" % [ms]
-          Rails.logger.debug "#{result.inspect}"
+          result = self.get(path, :query => ( options[:access_token].blank? ? {:access_token => facebook_access_token}.merge(options) : options ))
+          # Rails.logger.debug "#{self.name} #{path} (%.1fms)  #{options.inspect}" % [ms]
+          # Rails.logger.debug "#{result.inspect}"
           result
         rescue Exception => e
-          Rails.logger.debug "#{e.class.name}: #{e.message}: #{self.name} #{path} #{options.inspect}"
+#          Rails.logger.debug "#{e.class.name}: #{e.message}: #{self.name} #{path} #{options.inspect}"
           raise e
         end
 
@@ -60,7 +60,9 @@ module Mosaic
             perform_request_without_retry(http_method, path, options)
           end
         end
-        alias_method_chain :perform_request, :retry
+        # alias_method_chain :perform_request, :retry
+        alias_method :perform_request_without_retry, :perform_request
+        alias_method :perform_request, :perform_request_with_retry
 
         def with_retry(exception = Exception, attempts = 3)
           tries = 0
