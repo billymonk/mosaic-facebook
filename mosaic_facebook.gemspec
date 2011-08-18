@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.4"
   
   s.add_dependency "httparty"
-  s.add_development_dependency "activesupport", "~> 2.3"
   s.add_dependency 'rack', '~> 1.2.2'
   s.add_development_dependency "rspec", '~> 2.5.0'
 

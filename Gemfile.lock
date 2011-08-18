@@ -1,0 +1,32 @@
+PATH
+  remote: .
+  specs:
+    mosaic_facebook (0.0.1)
+      httparty
+      rack (~> 1.2.2)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    crack (0.1.8)
+    diff-lcs (1.1.2)
+    httparty (0.7.7)
+      crack (= 0.1.8)
+    rack (1.2.3)
+    rspec (2.5.0)
+      rspec-core (~> 2.5.0)
+      rspec-expectations (~> 2.5.0)
+      rspec-mocks (~> 2.5.0)
+    rspec-core (2.5.2)
+    rspec-expectations (2.5.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  httparty
+  mosaic_facebook!
+  rack (~> 1.2.2)
+  rspec (~> 2.5.0)
