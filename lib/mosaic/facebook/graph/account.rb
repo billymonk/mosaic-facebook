@@ -17,13 +17,13 @@ module Mosaic
         end
 
         class << self
-          def all
+          def all(options = {})
             # need 'manage_pages' extended permission to get pages (via accounts connection)
-            @all ||= find("/#{facebook_user}/accounts")
+            @all ||= find("/#{facebook_user}/accounts", options)
           end
           
-          def find_by_name(name)
-            all.find { |account| account.name == name }
+          def find_by_name(name, options = {})
+            all(options).find { |account| account.name == name }
           end
         end
       end

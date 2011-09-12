@@ -8,7 +8,11 @@ module Mosaic
         end
 
         def all(options = {})
-          @klass.find(@path, options)
+          @all ||= @klass.find(@path, options)
+        end
+
+        def create(attributes = {}, options = {})
+          @klass.new(attributes).post(@path, options)
         end
       end
     end

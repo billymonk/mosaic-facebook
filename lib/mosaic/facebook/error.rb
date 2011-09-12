@@ -3,15 +3,20 @@ module Mosaic
       class Error < StandardError
         attr_reader :error_code
 
-        def initialize(error_response)
-          super(error_response['error_msg'])
-          @error_code = error_response['error_code'].to_i
+        def initialize(message, code = nil)
+          super(message)
+          @error_code = code
         end
 
         class << self
-          def new(error_response)
-            klass = EXCEPTIONS[error_response['error_code'].to_i] || Error
-            klass.allocate.tap { |obj| obj.send :initialize, error_response }
+          def new(error)
+            if error.include?('error_code')
+              klass = EXCEPTION_CODES[error['error_code'].to_i] || Error
+              klass.allocate.tap { |obj| obj.send :initialize, error['error_msg'], error['error_code'].to_i }
+            else
+              klass = EXCEPTION_TYPES[error['type']] || Error
+              klass.allocate.tap { |obj| obj.send :initialize, error['message'] }
+            end
           end
         end
       end
@@ -25,12 +30,15 @@ module Mosaic
       class AccessTokenError < Mosaic::Facebook::Error
       end
 
-      EXCEPTIONS = {
+      EXCEPTION_CODES = {
         1 => UnknownError,
         101 => AccessTokenError,
         190 => AccessTokenError,
         601 => ParserError
       }
-    
+
+      EXCEPTION_TYPES = {
+        'OAuthException' => AccessTokenError
+      }
   end
 end

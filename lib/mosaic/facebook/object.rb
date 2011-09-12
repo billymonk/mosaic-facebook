@@ -4,10 +4,24 @@ module Mosaic
   module Facebook
     class Object
       include HTTParty
+      debug_output
 
       def initialize(attributes = {})
         attributes.each { |key,value| instance_variable_set("@#{key}".to_sym, value) }
       end
+
+      def delete(path, options = {})
+        query = { :access_token => facebook_access_token }.merge(options)
+        body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }].to_json
+        self.class.delete path, :query => query, :body => body
+      end
+
+      def post(path, options)
+        query = { :access_token => facebook_access_token }.merge(options)
+        body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }].to_json
+        self.class.post path, :query => query, :body => body
+      end
+
 
       class << self
         def attr_accessor(*names)
@@ -42,16 +56,9 @@ module Mosaic
         def facebook_user
           @facebook_user ||= configuration['user']
         end
-#@logger ||= defined?(Rails.logger) ? Rails.logger : Logger.new
-        def query(path, options)
-          result = nil
-          result = self.get(path, :query => ( options[:access_token].blank? ? {:access_token => facebook_access_token}.merge(options) : options ))
-          # Rails.logger.debug "#{self.name} #{path} (%.1fms)  #{options.inspect}" % [ms]
-          # Rails.logger.debug "#{result.inspect}"
-          result
-        rescue Exception => e
-#          Rails.logger.debug "#{e.class.name}: #{e.message}: #{self.name} #{path} #{options.inspect}"
-          raise e
+
+        def get(path, options)
+          super(path, :query => options)
         end
 
       private
