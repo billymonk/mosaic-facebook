@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mosaic_facebook (0.0.1)
+    mosaic_facebook (0.1.0)
       httparty
       rack (~> 1.2.2)
 
@@ -10,9 +10,9 @@ GEM
   specs:
     crack (0.1.8)
     diff-lcs (1.1.2)
-    httparty (0.7.7)
+    httparty (0.7.8)
       crack (= 0.1.8)
-    rack (1.2.3)
+    rack (1.2.4)
     rspec (2.5.0)
       rspec-core (~> 2.5.0)
       rspec-expectations (~> 2.5.0)
@@ -26,7 +26,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  httparty
   mosaic_facebook!
-  rack (~> 1.2.2)
   rspec (~> 2.5.0)
