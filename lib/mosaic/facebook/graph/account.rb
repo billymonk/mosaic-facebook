@@ -16,16 +16,17 @@ module Mosaic
           @user ||= AssociationProxy.new(Mosaic::Facebook::Graph::User, "/me")
         end
 
-        class << self
-          def all(options = {})
-            # need 'manage_pages' extended permission to get pages (via accounts connection)
-            @all ||= find("/#{facebook_user}/accounts", options)
-          end
-          
-          def find_by_name(name, options = {})
-            all(options).find { |account| account.name == name }
-          end
-        end
+        # TODO: replaced by the accounts proxy of the User class
+        # class << self
+        #   def all(options = {})
+        #     # need 'manage_pages' extended permission to get pages (via accounts connection)
+        #     @all ||= find("/#{facebook_user}/accounts", options)
+        #   end
+        #   
+        #   def find_by_name(name, options = {})
+        #     all(options).find { |account| account.name == name }
+        #   end
+        # end
       end
     end
   end

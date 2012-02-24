@@ -1,6 +1,6 @@
 # $:.push File.expand_path("../lib", __FILE__)
 # require 'httparty'
-# require 'lib/mosaic_facebook'
+# require 'lib/mosaic/facebook'
 
 require 'rubygems'
 require 'bundler/setup'
@@ -10,4 +10,4 @@ Bundler.require(:default)
 # lib_path = File.expand_path("#{SPEC_DIR}/../lib")
 # $LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
 
-require 'mosaic_facebook'
+require 'mosaic/facebook'

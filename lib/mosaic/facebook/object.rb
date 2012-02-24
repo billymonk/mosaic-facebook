@@ -4,24 +4,21 @@ module Mosaic
   module Facebook
     class Object
       include HTTParty
-      debug_output
+      # debug_output
 
       def initialize(attributes = {})
         attributes.each { |key,value| instance_variable_set("@#{key}".to_sym, value) }
       end
 
       def delete(path, options = {})
-        query = { :access_token => facebook_access_token }.merge(options)
         body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }].to_json
-        self.class.delete path, :query => query, :body => body
+        self.class.delete path, :query => {:access_token => Mosaic::Facebook.access_token}.merge(options), :body => body
       end
 
       def post(path, options)
-        query = { :access_token => facebook_access_token }.merge(options)
         body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }].to_json
-        self.class.post path, :query => query, :body => body
+        self.class.post path, :query => {:access_token => Mosaic::Facebook.access_token}.merge(options), :body => body
       end
-
 
       class << self
         def attr_accessor(*names)
@@ -37,28 +34,8 @@ module Mosaic
           @attribute_names = names
         end
 
-        def configuration
-          @configuration ||= configuration_from_file
-        end
-
-        def configuration_file
-          Rails.root.join('config','facebook.yml')
-        end
-
-        def configuration_from_file
-          YAML.load_file(configuration_file) rescue nil
-        end
-
-        def facebook_access_token
-          @facebook_access_token ||= configuration && configuration['access_token']
-        end
-
-        def facebook_user
-          @facebook_user ||= configuration['user']
-        end
-
         def get(path, options)
-          super(path, :query => options)
+          super(path, :query => {:access_token => Mosaic::Facebook.access_token}.merge(options))
         end
 
       private
