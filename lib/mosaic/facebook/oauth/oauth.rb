@@ -26,7 +26,7 @@ module Mosaic
           end
 
           def access_token_options
-            { :client_id => @client_id, :redirect_uri => @redirect_uri, :client_secret => @client_secret, :code => @code }
+            { :client_id => @client_id, :redirect_uri => @redirect_uri, :client_secret => @client_secret, :code => @code, :grant_type => @grant_type }
           end
 
       end
