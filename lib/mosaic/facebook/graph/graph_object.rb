@@ -32,6 +32,11 @@ module Mosaic
             find("/#{id}", options)
           end
         end
+
+        private
+          def serialize_body(body)
+            body
+          end
       end
     end
   end

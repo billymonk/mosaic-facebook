@@ -11,15 +11,15 @@ module Mosaic
       end
 
       def delete(path, options = {})
-        query = { :access_token => facebook_access_token }.merge(options)
-        body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }].to_json
-        self.class.delete path, :query => query, :body => body
+        query = { :access_token => self.class.facebook_access_token }.merge(options)
+        body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }]
+        self.class.delete path, :query => query, :body => serialize_body(body)
       end
 
       def post(path, options)
-        query = { :access_token => facebook_access_token }.merge(options)
-        body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }].to_json
-        self.class.post path, :query => query, :body => body
+        query = { :access_token => self.class.facebook_access_token }.merge(options)
+        body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }]
+        self.class.post path, :query => query, :body => serialize_body(body)
       end
 
 
@@ -62,6 +62,10 @@ module Mosaic
         end
 
       private
+        def serialize_body(body)
+          body.to_json
+        end
+        
         def perform_request_with_retry(http_method, path, options)
           with_retry do
             perform_request_without_retry(http_method, path, options)
