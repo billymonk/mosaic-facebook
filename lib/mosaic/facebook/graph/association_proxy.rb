@@ -2,9 +2,10 @@ module Mosaic
   module Facebook
     module Graph
       class AssociationProxy
-        def initialize(klass, path)
+        def initialize(klass, path, data = nil)
           @klass = klass
           @path = path
+          @all = Array(data).collect { |attributes| @klass.new(attributes) } if data
         end
 
         def all(options = {})
@@ -13,6 +14,7 @@ module Mosaic
 
         def create(attributes = {}, options = {})
           @klass.new(attributes).post(@path, options)
+          @all = nil
         end
       end
     end
