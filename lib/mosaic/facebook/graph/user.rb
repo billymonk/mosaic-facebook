@@ -13,6 +13,10 @@ module Mosaic
           @picture.is_a?(Hash) ? @picture["data"]["url"] : @picture
         end
 
+        def likes
+          @likes ||= AssociationProxy.new(Mosaic::Facebook::Graph::Like, "/#{id}/likes")
+        end
+
         class << self
           def me(options = {})
             find_by_id('me', options)

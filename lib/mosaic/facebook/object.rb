@@ -86,7 +86,7 @@ module Mosaic
           rescue exception => e
             if tries < attempts
               tries += 1
-              RAILS_DEFAULT_LOGGER.debug "#{e.class.name}: #{e.message}: retry ##{tries}"
+              Rails.logger.debug "#{e.class.name}: #{e.message}: retry ##{tries}"
               retry
             end
             raise e

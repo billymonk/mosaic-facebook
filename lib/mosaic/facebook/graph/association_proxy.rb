@@ -8,6 +8,7 @@ module Mosaic
           @all = Array(data).collect { |attributes| @klass.new(attributes) } if data
         end
 
+        #TODO: Handle paging
         def all(options = {})
           @all ||= @klass.find(@path, options)
         end
