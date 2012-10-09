@@ -24,8 +24,12 @@ module Mosaic
 
 
       class << self
-        def attr_accessor(*names)
+        def attr_name(*names)
           self.attribute_names += names.collect(&:to_s)
+        end
+
+        def attr_accessor(*names)
+          attr_name(*names)
           super
         end
 

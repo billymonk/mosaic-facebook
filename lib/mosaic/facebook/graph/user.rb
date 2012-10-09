@@ -2,14 +2,15 @@ module Mosaic
   module Facebook
     module Graph
       class User < Mosaic::Facebook::Graph::GraphObject
-        attr_accessor :id, :birthday, :email, :first_name, :gender, :hometown, :last_name, :link, :locale, :location, :name, :picture, :username
+        attr_accessor :id, :birthday, :email, :first_name, :gender, :hometown, :last_name, :link, :locale, :location, :name, :username
+        attr_name :picture
 
         def accounts
           @accounts ||= AssociationProxy.new(Mosaic::Facebook::Graph::Account, "/#{id}/accounts")
         end
 
-        def profile_photo
-          picture.is_a?(Hash) ? picture["data"]["url"] : picture
+        def picture
+          @picture.is_a?(Hash) ? @picture["data"]["url"] : @picture
         end
 
         class << self
