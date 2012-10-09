@@ -8,6 +8,10 @@ module Mosaic
           @accounts ||= AssociationProxy.new(Mosaic::Facebook::Graph::Account, "/#{id}/accounts")
         end
 
+        def profile_photo
+          picture.is_a?(Hash) ? picture["data"]["url"] : picture
+        end
+
         class << self
           def me(options = {})
             find_by_id('me', options)
