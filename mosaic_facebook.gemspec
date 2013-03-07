@@ -18,9 +18,8 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "mosaic_facebook"
   s.required_rubygems_version = ">= 1.3.4"
 
-  s.add_dependency "httparty"
-  s.add_dependency 'rack'
-  s.add_development_dependency "rspec"
+  s.add_dependency "httparty", "~> 0.10.2"
+  s.add_dependency "activesupport", "~> 3.0"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
