@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency "httparty", "~> 0.10.2"
   s.add_dependency "activesupport", "~> 3.0"
 
+  s.add_development_dependency "rspec"
+
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
