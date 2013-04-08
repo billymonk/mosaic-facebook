@@ -11,4 +11,4 @@ SPEC_DIR = File.dirname(__FILE__)
 # $LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
 
 require 'mosaic-facebook'
-FBK_CREDS = YAML.load(File.open("#{SPEC_DIR}/facebook_credentials.yml", 'r'))
+FACEBOOK_CONFIG = YAML.load(File.open("#{SPEC_DIR}/facebook_config.yml", 'r'))
