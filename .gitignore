@@ -3,4 +3,6 @@ pkg/*
 .bundle
 .DS_Store
 Gemfile.lock
-spec/facebook_credentials.yml
+spec/facebook_config.yml
+*.swp
+vendor/bundle
