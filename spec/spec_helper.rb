@@ -11,3 +11,9 @@ Bundler.require(:default)
 # $LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
 
 require 'mosaic_facebook'
+
+RSpec.configure do |config|
+  config.add_setting :facebook_id, :default => ""
+  config.add_setting :facebook_page_id, :default => ""
+  config.add_setting :access_token, :default => ""
+end
