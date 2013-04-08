@@ -45,12 +45,8 @@ module Mosaic
           @configuration ||= configuration_from_file
         end
 
-        def configuration_file
-          Rails.root.join('config','facebook.yml')
-        end
-
         def configuration_from_file
-          YAML.load_file(configuration_file) rescue nil
+          YAML.load_file(@configuration_file) rescue nil
         end
 
         def facebook_access_token
@@ -66,10 +62,19 @@ module Mosaic
         end
 
       private
+        def logger
+          @logger ||= if defined?(Rails)
+            Rails.logger
+          else
+            require 'logger'
+            Logger.new(STDOUT)
+          end
+        end
+
         def serialize_body(body)
           body.to_json
         end
-        
+
         def perform_request_with_retry(http_method, path, options)
           with_retry do
             perform_request_without_retry(http_method, path, options)
@@ -86,7 +91,7 @@ module Mosaic
           rescue exception => e
             if tries < attempts
               tries += 1
-              RAILS_DEFAULT_LOGGER.debug "#{e.class.name}: #{e.message}: retry ##{tries}"
+              logger.debug "#{e.class.name}: #{e.message}: retry ##{tries}"
               retry
             end
             raise e
