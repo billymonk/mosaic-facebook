@@ -12,3 +12,9 @@ SPEC_DIR = File.dirname(__FILE__)
 
 require 'mosaic-facebook'
 FACEBOOK_CONFIG = YAML.load(File.open("#{SPEC_DIR}/facebook_config.yml", 'r'))
+
+RSpec.configure do |config|
+  config.add_setting :access_token, :default => FACEBOOK_CONFIG["access_token"]
+  config.add_setting :user_id, :default => FACEBOOK_CONFIG["user_id"]
+  config.add_setting :page_id, :default => FACEBOOK_CONFIG["page_id"]
+end
