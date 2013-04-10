@@ -4,7 +4,7 @@ module Mosaic
   module Facebook
     class Object
       include HTTParty
-      debug_output
+      # debug_output
 
       def initialize(attributes = {})
         attributes.each { |key,value| instance_variable_set("@#{key}".to_sym, value) }
