@@ -11,10 +11,6 @@ module Mosaic
         def posts
           @posts ||= AssociationProxy.new(Mosaic::Facebook::Graph::Post, "/#{self.id}/posts")
         end
-        
-        def user
-          @user ||= AssociationProxy.new(Mosaic::Facebook::Graph::User, "/me")
-        end
 
         class << self
           def all(options = {})
