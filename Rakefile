@@ -9,6 +9,8 @@ Bundler::GemHelper.install_tasks
 desc "Run RSpec"
 RSpec::Core::RakeTask.new do |t|
   t.verbose = false
+  t.pattern = ['spec/**/*_spec.rb']
+  t.rspec_opts = ['--options', 'spec/spec.opts']
 end
 # Spec::Rake::SpecTask.new(:spec) do |spec|
 #   spec.ruby_opts << '-rubygems'
