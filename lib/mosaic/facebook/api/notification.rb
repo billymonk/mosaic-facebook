@@ -1,5 +1,7 @@
 require 'mosaic/facebook/error'
 
+# TODO: fix the namespace (ie. module) this should be Mosaic::Facebook::Api::Notification
+#       or notification.rb should be moved up a folder
 module Mosaic
   module Facebook
     class Notification < Mosaic::Facebook::Api::ApiObject
