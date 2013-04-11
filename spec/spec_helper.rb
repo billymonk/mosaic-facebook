@@ -17,4 +17,6 @@ RSpec.configure do |config|
   config.add_setting :access_token, :default => FACEBOOK_CONFIG["access_token"]
   config.add_setting :user_id, :default => FACEBOOK_CONFIG["user_id"]
   config.add_setting :page_id, :default => FACEBOOK_CONFIG["page_id"]
+  config.add_setting :app_id, :default => FACEBOOK_CONFIG["app_id"]
+  config.add_setting :app_secret, :default => FACEBOOK_CONFIG["app_secret"]
 end
