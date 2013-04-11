@@ -53,10 +53,6 @@ module Mosaic
           @facebook_access_token ||= configuration && configuration['access_token']
         end
 
-        def facebook_user
-          @facebook_user ||= configuration['user']
-        end
-
         def get(path, options)
           super(path, :query => options)
         end
