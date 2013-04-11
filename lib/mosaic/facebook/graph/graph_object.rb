@@ -10,6 +10,12 @@ module Mosaic
           response
         end
 
+        def get(path, options = {})
+          response = super(path, options)
+          raise Mosaic::Facebook::Error.new(response['error']) if !response.success?
+          response
+        end
+
         def post(path, options = {})
           response = super(path, options)
           raise Mosaic::Facebook::Error.new(response['error']) if !response.success?
@@ -18,7 +24,7 @@ module Mosaic
 
         class << self
           def find(path, options = {})
-            response = get(path, options)
+            response = get(path, :query => options)
             raise Mosaic::Facebook::Error.new(response['error']) if !response.success?
             data = response.parsed_response
             if data.include?('data')

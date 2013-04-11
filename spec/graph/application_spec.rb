@@ -1,7 +1,35 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe Mosaic::Facebook::Graph::Application do
-  it "should be tested" do
-    pending "writing tests"
+  context "self.find_by_id" do
+    it "should require an access token" do
+      expect { Mosaic::Facebook::Graph::Application.find_by_id(RSpec.configuration.app_id) }.to raise_error(Mosaic::Facebook::Error, /unsupported get request/i)
+    end
+
+    context "with an access token" do
+      it "should find an application" do
+        application = Mosaic::Facebook::Graph::Application.find_by_id(RSpec.configuration.app_id, :access_token => RSpec.configuration.access_token)
+        expect(application).to be_an_instance_of(Mosaic::Facebook::Graph::Application)
+      end
+    end
+  end
+
+  context "given an application (and a client secret)" do
+    before(:all) do
+      @application = Mosaic::Facebook::Graph::Application.new(:id => RSpec.configuration.app_id, :secret => RSpec.configuration.app_secret)
+    end
+
+    it "should retrieve an access token" do
+      access_token = @application.access_token
+      expect(access_token).to be_an_instance_of String
+    end
+
+    it "should return a list of subscriptions" do
+      # requires an application access token
+      subscriptions = @application.subscriptions.all(:access_token => @application.access_token)
+      expect(subscriptions).to be_an_instance_of Array
+      # TODO: add subscription to test?
+      # expect(subscriptions.first).to be_an_instance_of Mosaic::Facebook::Graph::Subscription
+    end
   end
 end

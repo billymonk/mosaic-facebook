@@ -10,10 +10,9 @@ module Mosaic
         attributes.each { |key,value| instance_variable_set("@#{key}".to_sym, value) }
       end
 
-      def delete(path, options = {})
+      def get(path, options = {})
         query = { :access_token => self.class.facebook_access_token }.merge(options)
-        body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }]
-        self.class.delete path, :query => query, :body => serialize_body(body)
+        self.class.get path, :query => query
       end
 
       def post(path, options)
@@ -21,7 +20,6 @@ module Mosaic
         body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }]
         self.class.post path, :query => query, :body => serialize_body(body)
       end
-
 
       class << self
         def attr_name(*names)
@@ -51,10 +49,6 @@ module Mosaic
 
         def facebook_access_token
           @facebook_access_token ||= configuration && configuration['access_token']
-        end
-
-        def get(path, options)
-          super(path, :query => options)
         end
 
       private
