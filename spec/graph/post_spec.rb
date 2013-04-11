@@ -12,7 +12,6 @@ describe Mosaic::Facebook::Graph::Post do
     it "should retrieve the user who posted it" do
       post = @posts.first
       expect(post.from.all).to be_an_instance_of Mosaic::Facebook::Graph::User
-      STDERR.puts post.from.all.inspect
     end
 
     # FIXME: requires a comment to actually exist in the retrieved posts...
