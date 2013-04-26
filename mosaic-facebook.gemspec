@@ -21,6 +21,12 @@ Gem::Specification.new do |s|
   s.add_dependency "httparty", "~> 0.10.2"
   s.add_dependency "activesupport", "~> 3.0"
 
+
+  if RUBY_VERSION < "1.9"
+    s.add_development_dependency "ruby-debug"
+  else
+    s.add_development_dependency "debugger"
+  end
   s.add_development_dependency "rspec"
 
   s.files         = `git ls-files`.split("\n")
