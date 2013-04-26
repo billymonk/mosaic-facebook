@@ -2,31 +2,31 @@ module Mosaic
   module Facebook
     module Graph
       class GraphObject < Mosaic::Facebook::Object
-        base_uri 'https://graph.facebook.com'
+        BASE_URI = "https://graph.facebook.com"
 
         def delete(path, options = {})
           response = super(path, options)
-          raise Mosaic::Facebook::Error.new(response['error']) if !response.success?
+          raise Mosaic::Facebook::Error.new(response.body['error']) if !response.success?
           response
         end
 
         def get(path, options = {})
           response = super(path, options)
-          raise Mosaic::Facebook::Error.new(response['error']) if !response.success?
+          raise Mosaic::Facebook::Error.new(response.body['error']) if !response.success?
           response
         end
 
         def post(path, options = {})
           response = super(path, options)
-          raise Mosaic::Facebook::Error.new(response['error']) if !response.success?
+          raise Mosaic::Facebook::Error.new(response.body['error']) if !response.success?
           response
         end
 
         class << self
           def find(path, options = {})
-            response = get(path, :query => options)
-            raise Mosaic::Facebook::Error.new(response['error']) if !response.success?
-            data = response.parsed_response
+            response = new.get(path, options)
+            raise Mosaic::Facebook::Error.new(response.body['error']) if !response.success?
+            data = response.body
             if data.include?('data')
               data['data'].collect { |attributes| new(attributes) }
             else
@@ -35,7 +35,7 @@ module Mosaic
           end
 
           def find_by_id(id, options = {})
-            find("/#{id}", options)
+            find("#{BASE_URI}/#{id}", options)
           end
         end
 

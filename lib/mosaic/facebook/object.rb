@@ -1,24 +1,36 @@
-require 'httparty'
+require 'faraday'
+require 'faraday_middleware'
+require 'mosaic/facebook/error'
+require 'multi_xml'
 
 module Mosaic
   module Facebook
     class Object
-      include HTTParty
       # debug_output
 
       def initialize(attributes = {})
         attributes.each { |key,value| instance_variable_set("@#{key}".to_sym, value) }
+
+        @conn = Faraday.new do |faraday|
+          faraday.request :retry, :max => 3,
+            :exceptions => [Exception, Mosaic::Facebook::UnknownError]
+          faraday.request :url_encoded
+          faraday.response :json, :content_type => /\bjson$/
+          faraday.response :xml,  :content_type => /\bxml$/
+
+          faraday.adapter Faraday.default_adapter
+        end
       end
 
       def get(path, options = {})
         query = { :access_token => self.class.facebook_access_token }.merge(options)
-        self.class.get path, :query => query
+        @conn.get path, query
       end
 
       def post(path, options)
         query = { :access_token => self.class.facebook_access_token }.merge(options)
         body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }]
-        self.class.post path, :query => query, :body => serialize_body(body)
+        @conn.post path, :query => query, :body => serialize_body(body)
       end
 
       class << self
@@ -63,29 +75,6 @@ module Mosaic
 
         def serialize_body(body)
           body.to_json
-        end
-
-        def perform_request_with_retry(http_method, path, options)
-          with_retry do
-            perform_request_without_retry(http_method, path, options)
-          end
-        end
-        # alias_method_chain :perform_request, :retry
-        alias_method :perform_request_without_retry, :perform_request
-        alias_method :perform_request, :perform_request_with_retry
-
-        def with_retry(exception = Exception, attempts = 3)
-          tries = 0
-          begin
-            return yield
-          rescue exception => e
-            if tries < attempts
-              tries += 1
-              logger.debug "#{e.class.name}: #{e.message}: retry ##{tries}"
-              retry
-            end
-            raise e
-          end
         end
       end
     end

@@ -1,9 +1,9 @@
 # $:.push File.expand_path("../lib", __FILE__)
-# require 'httparty'
 # require 'lib/mosaic_facebook'
 
 require 'rubygems'
 require 'bundler/setup'
+require 'yaml'
 Bundler.require(:default)
 
 SPEC_DIR = File.dirname(__FILE__)

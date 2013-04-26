@@ -45,14 +45,14 @@ module Mosaic
           end
 
           def find(*args)
-            response = with_retry(Mosaic::Facebook::Fql::UnknownError) { find_by_fql(*args) }
+            response = find_by_sql(*args)
             data = response['fql_query_response'][record_name] || []
             data = [data] unless data.is_a?(Array)
             data.collect { |attributes| new(attributes) }
           end
 
           def find_by_fql(*args)
-            response = get('/method/fql.query', :query => build_fql(*args))
+            response = new.get("#{self::BASE_URI}/method/fql.query", build_fql(*args))
             raise Mosaic::Facebook::Error.new(response['error_response']) if response.include?('error_response')
             response
           end

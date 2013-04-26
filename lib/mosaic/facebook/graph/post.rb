@@ -6,15 +6,15 @@ module Mosaic
 
         def comments
           if @comments.is_a?(Hash)
-            @comments = AssociationProxy.new(Mosaic::Facebook::Graph::Comment, "/#{id}/comments", @comments['data'])
+            @comments = AssociationProxy.new(Mosaic::Facebook::Graph::Comment, "#{BASE_URI}/#{id}/comments", @comments['data'])
           else
-            @comments ||= AssociationProxy.new(Mosaic::Facebook::Graph::Comment, "/#{id}/comments")
+            @comments ||= AssociationProxy.new(Mosaic::Facebook::Graph::Comment, "#{BASE_URI}/#{id}/comments")
           end
         end
 
         def from
           if @from.is_a?(Hash)
-            @from = AssociationProxy.new(Mosaic::Facebook::Graph::User, "/#{@from['id']}")
+            @from = AssociationProxy.new(Mosaic::Facebook::Graph::User, "#{BASE_URI}/#{@from['id']}")
           else
             @from
           end

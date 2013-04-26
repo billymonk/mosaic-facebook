@@ -12,13 +12,13 @@ module Mosaic
 
         def subscriptions
           # requires an application access token
-          @subscriptions ||= AssociationProxy.new(Mosaic::Facebook::Graph::Subscription, "/#{id}/subscriptions")
+          @subscriptions ||= AssociationProxy.new(Mosaic::Facebook::Graph::Subscription, "#{BASE_URI}/#{id}/subscriptions")
         end
 
         protected
 
         def get_access_token
-          response = get('/oauth/access_token', :client_id => id, :client_secret => secret, :grant_type => 'client_credentials')
+          response = get("#{BASE_URI}/oauth/access_token", :client_id => id, :client_secret => secret, :grant_type => 'client_credentials')
           CGI.parse(response.body)['access_token'].first
         end
       end

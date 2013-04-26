@@ -6,7 +6,7 @@ module Mosaic
         attr_name :picture
 
         def accounts
-          @accounts ||= AssociationProxy.new(Mosaic::Facebook::Graph::Account, "/#{id}/accounts")
+          @accounts ||= AssociationProxy.new(Mosaic::Facebook::Graph::Account, "#{BASE_URI}/#{id}/accounts")
         end
 
         def picture
