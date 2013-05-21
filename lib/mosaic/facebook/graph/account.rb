@@ -16,7 +16,7 @@ module Mosaic
         class << self
           def all(options = {})
             # need 'manage_pages' extended permission to get pages (via accounts connection)
-            @all ||= find("/me/accounts", options)
+            @all ||= find('/me/accounts', options)
           end
 
           def find_by_name(name, options = {})

@@ -4,7 +4,7 @@ module Mosaic
       class ApiObject < Mosaic::Facebook::Object
         class << self
           def base_uri
-            "https://api.facebook.com"
+            'https://api.facebook.com'
           end
         end
       end

@@ -18,7 +18,7 @@ module Mosaic
         protected
 
         def get_access_token
-          response = get("/oauth/access_token", :client_id => id, :client_secret => secret, :grant_type => 'client_credentials')
+          response = get('/oauth/access_token', :client_id => id, :client_secret => secret, :grant_type => 'client_credentials')
           CGI.parse(response.body)['access_token'].first
         end
       end
