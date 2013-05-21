@@ -52,7 +52,7 @@ module Mosaic
           end
 
           def find_by_fql(*args)
-            response = new.get("#{self::BASE_URI}/method/fql.query", build_fql(*args))
+            response = new.get("/method/fql.query", build_fql(*args))
             raise Mosaic::Facebook::Error.new(response['error_response']) if response.include?('error_response')
             response
           end

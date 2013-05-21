@@ -8,6 +8,12 @@ module Mosaic
     class Object
       # debug_output
 
+      class << self
+        def base_uri
+          raise NotImplementedError
+        end
+      end
+
       def initialize(attributes = {})
         attributes.each { |key,value| instance_variable_set("@#{key}".to_sym, value) }
 
@@ -24,13 +30,13 @@ module Mosaic
 
       def get(path, options = {})
         query = { :access_token => self.class.facebook_access_token }.merge(options)
-        @conn.get path, query
+        @conn.get URI.join(self.class.base_uri, path), query
       end
 
       def post(path, options)
         query = { :access_token => self.class.facebook_access_token }.merge(options)
         body = Hash[instance_variables.collect { |ivar| [ivar.sub(/@/,''),instance_variable_get(ivar)] }]
-        @conn.post path, :query => query, :body => serialize_body(body)
+        @conn.post URI.join(self.class.base_uri, path), :query => query, :body => serialize_body(body)
       end
 
       class << self

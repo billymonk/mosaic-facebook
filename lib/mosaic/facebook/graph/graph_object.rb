@@ -2,7 +2,11 @@ module Mosaic
   module Facebook
     module Graph
       class GraphObject < Mosaic::Facebook::Object
-        BASE_URI = "https://graph.facebook.com"
+        class << self
+          def base_uri
+            "https://graph.facebook.com"
+          end
+        end
 
         def delete(path, options = {})
           response = super(path, options)
@@ -35,7 +39,7 @@ module Mosaic
           end
 
           def find_by_id(id, options = {})
-            find("#{BASE_URI}/#{id}", options)
+            find("/#{id}", options)
           end
         end
 
