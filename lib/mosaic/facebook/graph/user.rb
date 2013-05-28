@@ -10,7 +10,7 @@ module Mosaic
         end
 
         def picture
-          @picture.is_a?(Hash) ? @picture["data"]["url"] : @picture
+          @picture.is_a?(Hash) ? @picture['data']['url'] : @picture
         end
 
         class << self

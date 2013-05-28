@@ -1,5 +1,4 @@
 # $:.push File.expand_path("../lib", __FILE__)
-# require 'httparty'
 # require 'lib/mosaic_facebook'
 
 require 'rubygems'
