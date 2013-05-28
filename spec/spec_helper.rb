@@ -3,7 +3,6 @@
 
 require 'rubygems'
 require 'bundler/setup'
-require 'yaml'
 Bundler.require(:default)
 
 SPEC_DIR = File.dirname(__FILE__)

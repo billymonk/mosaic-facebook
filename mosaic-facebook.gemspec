@@ -22,16 +22,8 @@ Gem::Specification.new do |s|
   s.add_dependency "faraday_middleware", "~> 0.9.0"
   s.add_dependency "multi_xml", "~> 0.5.3"
   s.add_dependency "activesupport", "~> 3.0"
-  if RUBY_VERSION < "1.9"
-    s.add_dependency "json"
-  end
 
-
-  if RUBY_VERSION < "1.9"
-    s.add_development_dependency "ruby-debug"
-  else
-    s.add_development_dependency "debugger"
-  end
+  s.add_development_dependency "debugger"
   s.add_development_dependency "rspec"
 
   s.files         = `git ls-files`.split("\n")
