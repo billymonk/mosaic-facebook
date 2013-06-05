@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/267744423342706/events?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - ! '"141267977702238fddbef158beb63216d11b569b"'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '835869'
+      X-Fb-Debug:
+      - Dkk219qpBQsWZ+nCG/O4aN4sAHyRDtJEoMO8cuL52a4=
+      Date:
+      - Wed, 05 Jun 2013 14:27:17 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '720'
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"name":"I AM AN EVENT","start_time":"2013-06-05","id":"140051219523306"}],"paging":{"previous":"https:\/\/graph.facebook.com\/267744423342706\/events?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD&limit=5000&since=1370390400&__paging_token=140051219523306&__previous=1","next":"https:\/\/graph.facebook.com\/267744423342706\/events?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD&limit=5000&until=1370390400&__paging_token=140051219523306"}}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2013 14:27:16 GMT
+recorded_with: VCR 2.5.0

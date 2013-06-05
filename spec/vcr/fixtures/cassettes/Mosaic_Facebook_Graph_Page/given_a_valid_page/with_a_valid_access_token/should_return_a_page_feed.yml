@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/267744423342706/feed?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD&limit=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - ! '"9266e608d5773e193d0da1438b21a74c09f1f62b"'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '835869'
+      Content-Encoding:
+      - gzip
+      X-Fb-Debug:
+      - f5C//IFlFKlYxmq+Mdyg8dhMyfdRYCANi9LJf3IpVuk=
+      Date:
+      - Wed, 05 Jun 2013 14:27:17 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1044'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA+1Wa2/iOBT9Kygf+mVbyPsloRHQ0KWF0m2hD5ZVZBwDLkmc
+        iQ00rfjvcw20Guh0OtJ2Z7WPCJHEdu7j+N7j86RESCDF//1JoZHiK7rtOKZp
+        6oZh6o5qhwa8up6hWY6qWaanHCrjnCWK/+3lMI2RIBOWF2CrwZJsLkjOhxVB
+        8DRlMZsUsCRFCYHpOo3jotRh6Qz+OKK4dIXSaMQelNWhkhDO0UQu+zVot7ul
+        5mW3U2rWGkG92z0rnQQdsIOwoCzl6+C3NsFlQlIBkzFNZ/D1VIjMH1aGleVy
+        WR4jTEaMzcqYJcPKXqrDSsa4gFj3U14dvphv0xn5WNt/HCpZThcIA2BPSkQ4
+        zmkm04LYL+ajmGLwt0DxXEIRXAeXd93zYL0LlKQR5K5IQIlYsny2fUNxzJab
+        iYikciMkoKLIpAkukJhzmNo8hNvhhI1oTMLt4DyDopCJoiyDCNAmnhcUTnKU
+        TUu1i1YpeMhilpMclq6rRzMt2zA9z7JUzfUs6RfnBGxFoaDrTddVzThSzSPd
+        7mmmr3m+bvyiwgUWNl7fXyn3441atSxdN2xPl/Xq/A21+lJtABzfKzeJLcVH
+        MHMkpjkhn+AplM1XJcVpchd7y7ubKL7V41nrntHOfWB1e9g6f2w9dB77eue+
+        pbVSdThXVd0yjjd3tfaNYvy+6zGb58PKR/nedt0Ppv2xvjF67pNXGctyxOsW
+        eolsg34ZzcrjEY7SMrTMsJLzHJezaTasLPRhpTiGkWEFXbkEJ3eXBVfLEzr+
+        K3lmt1w/lmf2bP9snlnT7z7L8CnKocG5kOfD29Sg9zTdN3Tfct6jhv2V36EG
+        09B0z9Ft13ItyTY/+xj7wR5h6f/E8CcJ8V9ADLvF+rHEsGf7H0QMmtfTXN+0
+        feNdYrCkulA1X9OeKQQkn1SGoJFAZu1IXsPZgSTUPN2zVPsrjnglWF/0jpQu
+        qmm4uuEZqrYrXHtTykvwQ6Wt7/JaHqdhThK2ADEk8jl5mwVfpxCD+gwxm4O+
+        9VXQS5zkoRyDnMYo5mQl9xJNaDqRSeJ5zlm+zheNQYXDadj5rVqFGEZkDKLt
+        +X0F186HWU4WlIFI3ByffC2fJ1LzvSegx4REn2KaUFE1DhDGoOFDwWYkrTZq
+        IN2jgHGi4nqtpao0cC9J7T4IurpXaw9q593oJD3+3Dzt3pwMGsm0V+/wi+Wg
+        Fl3fxNFpo6jf8OBiaV/UXe8GD+rH/bM8XQzqy0Gj3zTvO9eTYhILxy3ODfyY
+        NlWneOg7wisGtVjctsigPh7Upu3LEzu9+izOojlpnHa9ltFsu7Pb/rLXHNT7
+        VpcNjg84TTGpaoZte67l2cZBGD7jUdXWUvsB0P8PAgNVR+M1MIbnaJ6trFZf
+        AJWKGzQ8DgAA
+    http_version: 
+  recorded_at: Wed, 05 Jun 2013 14:27:15 GMT
+recorded_with: VCR 2.5.0

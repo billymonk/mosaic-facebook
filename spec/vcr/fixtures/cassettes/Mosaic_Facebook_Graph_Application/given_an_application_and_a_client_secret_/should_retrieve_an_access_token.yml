@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/oauth/access_token?access_token&client_id=445085675566652&client_secret=9b8623ed52d4a87b7bedf6bd14034785&grant_type=client_credentials
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '835869'
+      X-Fb-Debug:
+      - LscIN1UDeBuLWUnbucYshraG/PiKCAY7zOEphh5ACGY=
+      Date:
+      - Wed, 05 Jun 2013 14:27:16 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '56'
+    body:
+      encoding: US-ASCII
+      string: access_token=445085675566652|6TLenMrO2RDKaS_HxX-HfXZ08gE
+    http_version: 
+  recorded_at: Wed, 05 Jun 2013 14:27:15 GMT
+recorded_with: VCR 2.5.0

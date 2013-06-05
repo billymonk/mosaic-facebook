@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - ! '"7c8fa8f62e86599083d6c977138a0a956c2b5e4a"'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '835869'
+      Content-Encoding:
+      - gzip
+      X-Fb-Debug:
+      - ZMkrhmPEU/cIucmqfA04Zzffp2Gq1YTlclZniatDn7A=
+      Date:
+      - Wed, 05 Jun 2013 14:27:14 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '949'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA82VW2+jRhTHv0rkh1UrrTbcL5GiaoZbsLHBXHyZZmVhbgYM
+        GBgbkyjfvbNp2mT7kj5VnQc0nBkdnXN+/P88T+IQh5O7358nUYiTrOnGyd1E
+        aarTGSdd/3iLk+hQN8cmGydfJ3VYJeQY5sfjeDNv6pI8+jCPbrywjvfNlVwJ
+        oyjp+x1uyqT+kQkARYu1pk+oCAL1iKWHXKKeLMurlssOgWPVcWy7VL21i9cP
+        m0HvTw4n6TqClhcwXbEK4j7FCBjLJ2pBnWmFU4oBwT5e61PmGPH6dKr3pWuq
+        Xa97mrdBoBQLexqqNY1X3bYgmZRqn2kiqGpgcl36ZF4v6nL0sSaUe6TMz1fn
+        1LpYz8M2N+3FSeUyk4Izpuvyi5KTAlcSUklfeUy6YQRR5DiOYVmOESmBhE9J
+        V/VkfBOgzs2F6fmaS6Kaavo7x7V109LIq+JqwNd2ir3wtYVPAnNb1dyfQ293
+        gOqRcwg8U9m9ppx8f/n6r9j8hW93zHv8CvTPkhmefyf3Aaz/Dvbl+99o33j+
+        0uMwy+vs18+Iana8MavFxUIw7oe5OurOqCZXxxDa1rNTv6DhioqFVNf1YETK
+        OhmBHc1pvqnyNtnTXIvAlpsigJRSWi4bNr9a8GplWy/Qp6mHKTA9r5TTcisz
+        Bo0ggtO80WYF8+BcHK4Is/VhEz7Mg+EEAb9P7H3hZ9cB1icR18s1i+CD4tsF
+        7vz2LMTb2VwslaTyhOEDUVqWRVlkaJYXyKj+V0Q/U9uNPzSf8QENbCgRQenC
+        z9rQoCJrbMJpvCYTB5TBcl5n5WCluXX4kBppbadnDoODGsfHfj4stUNBDTSR
+        P80z3qZSZ76eAReEK5mukGLDcZGFgXsRrstAPrBmKkutsHG0rREazuVINMgt
+        zMbkQI/AeLau1Yxxt7aNwKqopFzTS6oWjKw+82NQltCJ5a2N4LLn3vGwgixI
+        PEMTRhRPyf8RHiKH0+vnP7l7ntTJlchpcsD41N893j7eZl14OnxLwyjZN035
+        LWqqx1ua+rE4VmJYmaXox1tig825xv1vH/3w/mc3NCkq1yQ3AYWm2YwMLAQW
+        dmzUaqtP7bVBjOvgw3nvDAjEq/UxniojXPeaMwgOlOR1hKAazLr6guCAlEDn
+        ivkqG7MjFqVxwUZPtU6J4zUQsTwSG8MbM0EwReBguYZQey2exedEmdqyyeqW
+        VG6CwSeuG/B2g9Qvx7zK8T1PevrSpGmfvO13uzAlv4VdHt//k8zLyx9GUbR/
+        SwYAAA==
+    http_version: 
+  recorded_at: Wed, 05 Jun 2013 14:27:13 GMT
+recorded_with: VCR 2.5.0

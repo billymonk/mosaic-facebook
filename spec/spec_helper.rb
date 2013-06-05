@@ -3,11 +3,13 @@
 
 require 'rubygems'
 require 'bundler/setup'
+require 'vcr'
 Bundler.require(:default)
 
 SPEC_DIR = File.dirname(__FILE__)
 # lib_path = File.expand_path("#{SPEC_DIR}/../lib")
 # $LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
+require "#{SPEC_DIR}/vcr/vcr"
 
 require 'mosaic-facebook'
 FACEBOOK_CONFIG = YAML.load(File.open("#{SPEC_DIR}/facebook_config.yml", 'r'))
@@ -18,4 +20,5 @@ RSpec.configure do |config|
   config.add_setting :page_id, :default => FACEBOOK_CONFIG["page_id"]
   config.add_setting :app_id, :default => FACEBOOK_CONFIG["app_id"]
   config.add_setting :app_secret, :default => FACEBOOK_CONFIG["app_secret"]
+  config.treat_symbols_as_metadata_keys_with_true_values = true
 end

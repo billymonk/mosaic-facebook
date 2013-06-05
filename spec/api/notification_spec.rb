@@ -1,6 +1,6 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
-describe Mosaic::Facebook::Notification do
+describe Mosaic::Facebook::Notification, :vcr do
   def options
     options = {:recipients => "000000000", :subject => "testing", :text => "ajit", :access_token => "xxx"}
   end

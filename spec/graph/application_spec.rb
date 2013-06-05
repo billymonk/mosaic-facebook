@@ -1,6 +1,6 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
-describe Mosaic::Facebook::Graph::Application do
+describe Mosaic::Facebook::Graph::Application, :vcr do
   context "self.find_by_id" do
     it "should require an access token" do
       expect { Mosaic::Facebook::Graph::Application.find_by_id(RSpec.configuration.app_id) }.to raise_error(Mosaic::Facebook::Error, /unsupported get request/i)
