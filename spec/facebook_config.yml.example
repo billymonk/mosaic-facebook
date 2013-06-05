@@ -1,3 +1,6 @@
-access_token: "Your token goes here"
-page_id: "Pages ID"
-user_id: "Your ID"
+# Note: These are the values that VCR expects to be used.
+access_token: "CAACEdEose0cBAHfi2F6wO4sm9vMdyxK1j4fPrZC0gDq7uX4WJfGIrYdVdV4WgKzhcSo80YB4BmkPPQuXAP1t0j0p3qDpWAS8yOPMnuNEhaCBO2fF3ZAxItuy4ysSqBE0LZAUz1NHFyz0O0B5vbu6L7anhgg2aR3UjfHaji4AQZDZD"
+page_id: "267744423342706"
+user_id: "100000438239301"
+app_id: "445085675566652"
+app_secret: "9b8623ed52d4a87b7bedf6bd14034785"

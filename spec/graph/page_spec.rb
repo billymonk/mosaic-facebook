@@ -1,6 +1,6 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
-describe Mosaic::Facebook::Graph::Page do
+describe Mosaic::Facebook::Graph::Page, :vcr do
   context "given a valid page" do
     before(:all) do
       @page = Mosaic::Facebook::Graph::Page.new(:id => RSpec.configuration.page_id)

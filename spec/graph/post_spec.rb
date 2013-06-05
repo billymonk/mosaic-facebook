@@ -1,12 +1,14 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
-describe Mosaic::Facebook::Graph::Post do
+describe Mosaic::Facebook::Graph::Post, :vcr do
   context "given a page with posts" do
     before(:all) do
       @page = Mosaic::Facebook::Graph::Page.new(:id => RSpec.configuration.page_id)
       # FIXME: limit=10 work-around for facebook bug as per:
       #        https://developers.facebook.com/bugs/525301577527928?browse=search_516709daab5da1453067889
-      @posts = @page.feed.all(:access_token => RSpec.configuration.access_token, :limit => 10)
+      VCR.use_cassette("Mosaic_Facebook_Graph_Post/given_a_page_with_posts/should_get_ten_comments") do
+        @posts = @page.feed.all(:access_token => RSpec.configuration.access_token, :limit => 10)
+      end
     end
 
     it "should retrieve the user who posted it" do
@@ -18,7 +20,9 @@ describe Mosaic::Facebook::Graph::Post do
     #        maybe find a comment through another means first, and follow it to the post?
     context "and a post with comments" do
       before(:all) do
-        @post = @posts.find { |post| post.comments.all.any? }
+        VCR.use_cassette("Mosaic_Facebook_Graph_Post/given_a_page_with_posts/and_a_post_with_comments/should_get_post") do
+          @post = @posts.find { |post| post.comments.all.any? }
+        end
       end
 
       it "should retrieve the post's comments" do

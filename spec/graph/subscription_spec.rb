@@ -1,6 +1,6 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
-describe Mosaic::Facebook::Graph::Subscription do
+describe Mosaic::Facebook::Graph::Subscription, :vcr do
   it "should be tested" do
     pending "writing tests"
   end

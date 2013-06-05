@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/267744423342706_377489315701549/comments?access_token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - ! '"1050253aec7b29caff644806927dabfa81406eee"'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '835869'
+      X-Fb-Debug:
+      - On2sNHweWT37fao5S2IaRD48uIvxe8KOjuels8P4y7Y=
+      Date:
+      - Wed, 05 Jun 2013 14:27:18 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '11'
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[]}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2013 14:27:17 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/267744423342706_375522369231577/comments?access_token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - ! '"1050253aec7b29caff644806927dabfa81406eee"'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '835869'
+      X-Fb-Debug:
+      - WiddPh4Sh8xhCCEjK69dcBh5gQxfbCLdRMfzhU3z5ZE=
+      Date:
+      - Wed, 05 Jun 2013 14:27:18 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '11'
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[]}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2013 14:27:17 GMT
+recorded_with: VCR 2.5.0

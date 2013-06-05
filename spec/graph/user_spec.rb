@@ -1,6 +1,6 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
-describe Mosaic::Facebook::Graph::User do
+describe Mosaic::Facebook::Graph::User, :vcr do
   context "self.me" do
     it "should require an access token" do
       expect { Mosaic::Facebook::Graph::User.me }.to raise_error(Mosaic::Facebook::AccessTokenError)

@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/267744423342706?access_token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - ! '"8ddb8c0108d6e1ccd764b3706d1236e058b01001"'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '835869'
+      X-Fb-Debug:
+      - JXCRes1bsjzrttQgNDIbjnN/o+id2lAGrnCaFjzjJt8=
+      Date:
+      - Wed, 05 Jun 2013 14:27:18 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '354'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"267744423342706","app_id":"0","can_post":false,"category":"Computers\/technology","checkins":0,"has_added_app":false,"is_community_page":false,"is_published":true,"likes":0,"link":"http:\/\/www.facebook.com\/BillyMonkMosaicSandbox","name":"Billy
+        Monk Mosaic Sandbox","talking_about_count":0,"username":"BillyMonkMosaicSandbox","were_here_count":0}'
+    http_version: 
+  recorded_at: Wed, 05 Jun 2013 14:27:17 GMT
+recorded_with: VCR 2.5.0
