@@ -20,5 +20,7 @@ RSpec.configure do |config|
   config.add_setting :page_id, :default => FACEBOOK_CONFIG["page_id"]
   config.add_setting :app_id, :default => FACEBOOK_CONFIG["app_id"]
   config.add_setting :app_secret, :default => FACEBOOK_CONFIG["app_secret"]
+  config.add_setting :oauth_code, :default => FACEBOOK_CONFIG["oauth_code"]
+  config.add_setting :oauth_redirect_url, :default =>  FACEBOOK_CONFIG['oauth_redirect_url']
   config.treat_symbols_as_metadata_keys_with_true_values = true
 end

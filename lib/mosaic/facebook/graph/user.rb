@@ -13,6 +13,10 @@ module Mosaic
           @picture.is_a?(Hash) ? @picture['data']['url'] : @picture
         end
 
+        def likes
+          Mosaic::Facebook::Graph::Like.all(username, :access_token => oauth_token)
+        end
+
         class << self
           def me(options = {})
             find_by_id('me', options)

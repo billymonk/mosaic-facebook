@@ -34,5 +34,11 @@ describe Mosaic::Facebook::Graph::User, :vcr do
         end
       end
     end
+
+    it "should be able to retrieve likes" do
+      @me.oauth_token = RSpec.configuration.access_token
+      Mosaic::Facebook::Graph::Like.should_receive(:all).with(@me.username, :access_token => RSpec.configuration.access_token)
+      @me.likes
+    end
   end
 end
