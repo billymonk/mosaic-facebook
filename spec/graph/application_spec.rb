@@ -31,5 +31,6 @@ describe Mosaic::Facebook::Graph::Application, :vcr do
       # TODO: add subscription to test?
       # expect(subscriptions.first).to be_an_instance_of Mosaic::Facebook::Graph::Subscription
     end
+
   end
 end
