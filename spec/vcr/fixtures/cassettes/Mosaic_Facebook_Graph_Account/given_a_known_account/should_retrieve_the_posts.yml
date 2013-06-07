@@ -2,70 +2,47 @@
 http_interactions:
 - request:
     method: get
-    uri: https://graph.facebook.com/219979721356225/posts?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD&limit=3
+    uri: https://graph.facebook.com/219979721356225/posts?access_token=access_token&limit=3
     body:
       encoding: US-ASCII
-      string: ''
+      string: ""
     headers:
       User-Agent:
       - Faraday v0.8.7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Type:
       - application/json; charset=UTF-8
       Etag:
-      - ! '"fbbdeb1e93a108685c723dbca6de82d6497eee5e"'
+      - "\"a1891919cdb7f8ff0bf3992cda91ecde475fd650\""
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
       - no-cache
       X-Fb-Rev:
-      - '835869'
-      Content-Encoding:
-      - gzip
+      - "837897"
       X-Fb-Debug:
-      - jTJDvnNGmbKrWXgkOjx0Otl/ftAePk6MNh2AUEB0k3w=
+      - i553m9vOUHDGRHTWkK24I0omwRQL9KJ9K03DkYrHyA8=
       Date:
-      - Wed, 05 Jun 2013 14:27:15 GMT
+      - Thu, 06 Jun 2013 18:17:14 GMT
       Connection:
       - keep-alive
       Content-Length:
-      - '912'
+      - "3543"
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA+1Xa2/aSBT9K8gfUKtN/Bo/kVAFxERJk4CSEFqvV9YwHvBg
-        M+PaA9SN+O87Ng6p2LaK1K1W0RbxAeZezvgen+M5PEoR5FDq/PkokUjqSLrm
-        urZr6xowLV03Q9OyLN3QNVXVTU21pBNpnrOV1Pl2uygjyPGC5aXAGrBVtuY4
-        LwKFYxRTlrJFKVooXGFRvmYFJKj1puBwQejirbQ7kQq+/+lxrQWjCEct2KJ4
-        28pixpksgDKC+DqvsGLOs06gBEpdK05jGSbyfIYiKlPMAyVu1mFyCovYCBSg
-        qa5lNOOpoB5PN0JdNYHrAAfoYSEvs4XYJCU0+XqH7XYrzyHCM8YSGbFVs6ec
-        xdm7+YxE3T1lB8x2gXkXys2qalmuZrtA1lQb2Ibm6KZ8xHmblxnuau0cp3gD
-        KQ8RW1Pe1Z6Zu0sI5ykuWlOIkrI1iGEOUUW0aCGI0a8vV7DLCTqiIy9yVF1w
-        oGz0QCm/BEoeKHfci8FtPN4sE3lB5gJLgBJGi1odzU0T93SFKX8RL0dzCaJY
-        wYUYjjW1OznAX5EE/7vYfwmZ5GQDkZDVoxThAuUkq8YSJI3Xs5Qgsd8GputK
-        Rt6Dd/txdOPVMieYRmJ2qeId8y3Lk+YbTFO23RciTCu5VtKt7pr4WAtNVCre
-        10XYrNbyDfciFEU2W2LEw9pxR3KpLJRjYaIo5KT2ia5q4FQ1TnXrXjM7wBDv
-        P1TxEp3rTLj3BZ0Vwz+0NwCmYwD3tdh7/n17ZznVAsUFhgbUg73r8Uw7FE8w
-        A2hAd5yft3eD+dvezVHxD3s/aepX2PuA/Wrs3cjlP7G3Wm9uVE+MV3F6z354
-        eoNAMRzLcQ+nt77n1gk10wJAV8WoP23vJ8zf9v6OvQ+a+gX2fsZ+LfZ+kstL
-        7A1efHo3nbuKhTojVxEmy/GGsHWVRarUW9Sxd5HDLD6Kpd+OX+9SsiK8C9oQ
-        IVyIgMISTLuDXm/gRR4rsIr6vQtVJZ5zi3tLzxvpbu/K792MonN69ml4OZqe
-        +4NVfN+/LsZbvxc9TNPoclD2p4U33lrjvuNOkd8/m7zP6cbvb/3BZGgsrx8W
-        5SLltlPeAPSFDlW7/DyxuVv6vZR/uMB+f+734qvbc4vefeLvozUeXI7cCzC8
-        cpIPk+390O9PzBHzz9oFoUiEYyBitKsattEOwydC9gkZf+b/T2bEfwSSPjOj
-        Sbvd31JlZ/vdDQAA
-    http_version: 
-  recorded_at: Wed, 05 Jun 2013 14:27:14 GMT
+      string: "{\"data\":[{\"id\":\"219979721356225_566624210025106\",\"from\":{\"id\":\"219979721356225\",\"category\":\"Computers\\/technology\",\"name\":\"Mosaic (staging)\"},\"story\":\"Mosaic (staging) added a new photo.\",\"picture\":\"http:\\/\\/photos-h.ak.fbcdn.net\\/hphotos-ak-ash4\\/310964_566624030025124_2053983832_s.jpg\",\"link\":\"http:\\/\\/www.facebook.com\\/photo.php?fbid=566624030025124&set=a.566624006691793.1073741825.219979721356225&type=1&relevant_count=1\",\"name\":\"Skittles Wacky Characters\",\"icon\":\"http:\\/\\/static.ak.fbcdn.net\\/rsrc.php\\/v2\\/yz\\/r\\/StEh3RhPvjk.gif\",\"actions\":[{\"name\":\"Comment\",\"link\":\"http:\\/\\/www.facebook.com\\/219979721356225\\/posts\\/566624210025106\"},{\"name\":\"Like\",\"link\":\"http:\\/\\/www.facebook.com\\/219979721356225\\/posts\\/566624210025106\"}],\"privacy\":{\"description\":\"Public\",\"value\":\"EVERYONE\",\"friends\":\"\",\"networks\":\"\",\"allow\":\"\",\"deny\":\"\"},\"type\":\"photo\",\"status_type\":\"added_photos\",\"object_id\":\"566624030025124\",\"created_time\":\"2013-04-26T15:34:34+0000\",\"updated_time\":\"2013-04-26T15:34:34+0000\"},{\"id\":\"219979721356225_566624213358439\",\"from\":{\"id\":\"219979721356225\",\"category\":\"Computers\\/technology\",\"name\":\"Mosaic (staging)\"},\"story\":\"Mosaic (staging) added a new photo.\",\"picture\":\"http:\\/\\/photos-f.ak.fbcdn.net\\/hphotos-ak-prn1\\/934130_566624033358457_1064313288_s.jpg\",\"link\":\"http:\\/\\/www.facebook.com\\/photo.php?fbid=566624033358457&set=a.566624006691793.1073741825.219979721356225&type=1&relevant_count=1\",\"name\":\"Skittles Wacky Characters\",\"icon\":\"http:\\/\\/static.ak.fbcdn.net\\/rsrc.php\\/v2\\/yz\\/r\\/StEh3RhPvjk.gif\",\"actions\":[{\"name\":\"Comment\",\"link\":\"http:\\/\\/www.facebook.com\\/219979721356225\\/posts\\/566624213358439\"},{\"name\":\"Like\",\"link\":\"http:\\/\\/www.facebook.com\\/219979721356225\\/posts\\/566624213358439\"}],\"privacy\":{\"description\":\"Public\",\"value\":\"EVERYONE\",\"friends\":\"\",\"networks\":\"\",\"allow\":\"\",\"deny\":\"\"},\"type\":\"photo\",\"status_type\":\"added_photos\",\"object_id\":\"566624033358457\",\"created_time\":\"2013-04-26T15:34:34+0000\",\"updated_time\":\"2013-04-26T15:34:34+0000\"},{\"id\":\"219979721356225_566624203358440\",\"from\":{\"id\":\"219979721356225\",\"category\":\"Computers\\/technology\",\"name\":\"Mosaic (staging)\"},\"story\":\"Mosaic (staging) added a new photo.\",\"picture\":\"http:\\/\\/photos-b.ak.fbcdn.net\\/hphotos-ak-ash3\\/486894_566624023358458_1563320844_s.jpg\",\"link\":\"http:\\/\\/www.facebook.com\\/photo.php?fbid=566624023358458&set=a.566624006691793.1073741825.219979721356225&type=1&relevant_count=1\",\"name\":\"Skittles Wacky Characters\",\"icon\":\"http:\\/\\/static.ak.fbcdn.net\\/rsrc.php\\/v2\\/yz\\/r\\/StEh3RhPvjk.gif\",\"actions\":[{\"name\":\"Comment\",\"link\":\"http:\\/\\/www.facebook.com\\/219979721356225\\/posts\\/566624203358440\"},{\"name\":\"Like\",\"link\":\"http:\\/\\/www.facebook.com\\/219979721356225\\/posts\\/566624203358440\"}],\"privacy\":{\"description\":\"Public\",\"value\":\"EVERYONE\",\"friends\":\"\",\"networks\":\"\",\"allow\":\"\",\"deny\":\"\"},\"type\":\"photo\",\"status_type\":\"added_photos\",\"object_id\":\"566624023358458\",\"created_time\":\"2013-04-26T15:34:33+0000\",\"updated_time\":\"2013-04-26T15:34:33+0000\"}],\"paging\":{\"previous\":\"https:\\/\\/graph.facebook.com\\/219979721356225\\/posts?limit=3&access_token=access_token&since=1366990474&__previous=1\",\"next\":\"https:\\/\\/graph.facebook.com\\/219979721356225\\/posts?limit=3&access_token=access_token&until=1366990471\"}}"
+    http_version:
+  recorded_at: Thu, 06 Jun 2013 18:17:18 GMT
 recorded_with: VCR 2.5.0

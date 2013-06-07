@@ -2,24 +2,24 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.facebook.com/method/notifications.sendEmail?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD&recipients=100000438239301&subject=testing&text=ajit
+    uri: https://api.facebook.com/method/notifications.sendEmail?access_token=access_token&recipients=user_id&subject=testing&text=ajit
     body:
       encoding: US-ASCII
-      string: ''
+      string: ""
     headers:
       User-Agent:
       - Faraday v0.8.7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Type:
@@ -29,23 +29,21 @@ http_interactions:
       Pragma:
       - no-cache
       X-Fb-Rev:
-      - '835869'
+      - "837897"
       X-Fb-Debug:
-      - LZgTpgg1L+LvOLW0vSFaCZGIPqB9zC/B97d9X3EFY6k=
+      - FBotWKPotiCmABMAriUdpiwDqAI5mddEJTMawUX91II=
       Date:
-      - Wed, 05 Jun 2013 14:27:14 GMT
+      - Thu, 06 Jun 2013 18:17:13 GMT
       Connection:
       - keep-alive
       Content-Length:
-      - '257'
+      - "257"
     body:
       encoding: US-ASCII
-      string: ! '<?xml version="1.0" encoding="UTF-8"?>
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <notifications_sendEmail_response xmlns="http://api.facebook.com/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://api.facebook.com/1.0/ http://api.facebook.com/1.0/facebook.xsd"/>
 
-        <notifications_sendEmail_response xmlns="http://api.facebook.com/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://api.facebook.com/1.0/ http://api.facebook.com/1.0/facebook.xsd"/>
-
-'
-    http_version: 
-  recorded_at: Wed, 05 Jun 2013 14:27:13 GMT
+    http_version:
+  recorded_at: Thu, 06 Jun 2013 18:17:16 GMT
 recorded_with: VCR 2.5.0
