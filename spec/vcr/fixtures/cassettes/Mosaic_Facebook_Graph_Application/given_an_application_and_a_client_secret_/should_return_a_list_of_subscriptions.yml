@@ -2,47 +2,47 @@
 http_interactions:
 - request:
     method: get
-    uri: https://graph.facebook.com/445085675566652/subscriptions?access_token=445085675566652%7C6TLenMrO2RDKaS_HxX-HfXZ08gE
+    uri: https://graph.facebook.com/app_id/subscriptions?access_token=app_id%7C6TLenMrO2RDKaS_HxX-HfXZ08gE
     body:
       encoding: US-ASCII
-      string: ''
+      string: ""
     headers:
       User-Agent:
       - Faraday v0.8.7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Type:
       - application/json; charset=UTF-8
       Etag:
-      - ! '"1050253aec7b29caff644806927dabfa81406eee"'
+      - "\"1050253aec7b29caff644806927dabfa81406eee\""
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
       - no-cache
       X-Fb-Rev:
-      - '835869'
+      - "837897"
       X-Fb-Debug:
-      - IOKVrufVOZnuTSn1j1CpLRz88F/tPKDmOiz7VCgpPbY=
+      - KoKEu+K2we9WsFHqeKAxHyIT8mUGICwOAv/YVk5uEnc=
       Date:
-      - Wed, 05 Jun 2013 14:27:16 GMT
+      - Thu, 06 Jun 2013 18:17:15 GMT
       Connection:
       - keep-alive
       Content-Length:
-      - '11'
+      - "11"
     body:
       encoding: US-ASCII
-      string: ! '{"data":[]}'
-    http_version: 
-  recorded_at: Wed, 05 Jun 2013 14:27:15 GMT
+      string: "{\"data\":[]}"
+    http_version:
+  recorded_at: Thu, 06 Jun 2013 18:17:19 GMT
 recorded_with: VCR 2.5.0

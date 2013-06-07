@@ -2,47 +2,47 @@
 http_interactions:
 - request:
     method: get
-    uri: https://graph.facebook.com/445085675566652?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD
+    uri: https://graph.facebook.com/app_id?access_token=access_token
     body:
       encoding: US-ASCII
-      string: ''
+      string: ""
     headers:
       User-Agent:
       - Faraday v0.8.7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Type:
       - application/json; charset=UTF-8
       Etag:
-      - ! '"12a276ca4d836197dc0ee755d53ba5fdd105fc49"'
+      - "\"12a276ca4d836197dc0ee755d53ba5fdd105fc49\""
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
       - no-cache
       X-Fb-Rev:
-      - '835869'
+      - "837897"
       X-Fb-Debug:
-      - V//lT5QvP79jID0VxYIY65q7p45WJ35wv1AYwrHKYZU=
+      - fBNq2B6U6c3vjCx2qmnopZYoICpJYzzbLfYu+t86tLw=
       Date:
-      - Wed, 05 Jun 2013 14:27:16 GMT
+      - Thu, 06 Jun 2013 18:17:15 GMT
       Connection:
       - keep-alive
       Content-Length:
-      - '330'
+      - "330"
     body:
       encoding: US-ASCII
-      string: ! '{"id":"445085675566652","name":"Billy Monk Timeline Test","link":"http:\/\/www.facebook.com\/apps\/application.php?id=445085675566652","namespace":"billy-monk-time-test","icon_url":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/v2\/yT\/r\/4QVMqOjUhcd.gif","logo_url":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/v2\/y_\/r\/9myDd8iyu0B.gif"}'
-    http_version: 
-  recorded_at: Wed, 05 Jun 2013 14:27:14 GMT
+      string: "{\"id\":\"app_id\",\"name\":\"Billy Monk Timeline Test\",\"link\":\"http:\\/\\/www.facebook.com\\/apps\\/application.php?id=app_id\",\"namespace\":\"billy-monk-time-test\",\"icon_url\":\"http:\\/\\/static.ak.fbcdn.net\\/rsrc.php\\/v2\\/yT\\/r\\/4QVMqOjUhcd.gif\",\"logo_url\":\"http:\\/\\/static.ak.fbcdn.net\\/rsrc.php\\/v2\\/y_\\/r\\/9myDd8iyu0B.gif\"}"
+    http_version:
+  recorded_at: Thu, 06 Jun 2013 18:17:18 GMT
 recorded_with: VCR 2.5.0

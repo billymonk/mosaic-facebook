@@ -2,71 +2,47 @@
 http_interactions:
 - request:
     method: get
-    uri: https://graph.facebook.com/me/accounts?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD
+    uri: https://graph.facebook.com/me/accounts?access_token=access_token
     body:
       encoding: US-ASCII
-      string: ''
+      string: ""
     headers:
       User-Agent:
       - Faraday v0.8.7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Type:
       - application/json; charset=UTF-8
       Etag:
-      - ! '"121ace0919c1817e7fa4b4e90989ab29e73e742f"'
+      - "\"b33122738866a31d6895508bc6ee3c9970eb904b\""
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
       - no-cache
       X-Fb-Rev:
-      - '835869'
-      Content-Encoding:
-      - gzip
+      - "837897"
       X-Fb-Debug:
-      - E2hv1tlCkCI+4qPkdqcMWcdvzVdVaH2uuGEjw14ViVM=
+      - P/+8RSLOhdcW3LdmUQLD+V2T+9uOkOWLX64KU+ituqI=
       Date:
-      - Wed, 05 Jun 2013 14:27:20 GMT
+      - Thu, 06 Jun 2013 18:17:19 GMT
       Connection:
       - keep-alive
       Content-Length:
-      - '948'
+      - "1572"
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA82VWW/jNhDHv0rgh0ULLDa6jwBBIVKSrVvW4YPNwtBlWbYu
-        S7IlOch3rzZNm2xf0qeifCDI/xADzvw4w+dZHHTB7OH351kUdElaNePsYQar
-        or50SdM+3XdJdCirvErH2ddZGRTJZAZZno93RlWepqkNsujODco4rIbpSBBF
-        SdvuuuqUlD88CQKUYqlqEywCAijkA0UjwczG7SC3Kkts5WtNX50hqlbr8qp2
-        SktpLoJLzoEW2bSXeKykTcLq2bkMTlCyEPBuJqhvi0WDIMkjAW4Noj83F9db
-        bMIVXc6REBFieGsUzOV0BO0DJyKhcfUVkXcLRyXsZoAso8WZvDQDgY/jvgRk
-        7a4uCJT+nlhasaUdIzkz9FIG1nJyMfeROEWWxVM8BMOyFEURJEkRLMZMcp00
-        RTslcCaIhmIqric5kyqJirezHUtWdGnaQkcSPGkHLdOTTG8SDEuUnJ+ltzOC
-        6E52ILgK3L26nH1/+fqv6PwFcJdnbfeK9M8rEzT9zu4DWu8d7cv3v+G+Ef2l
-        7YI0K9NfP2Oqnc+k1i8N/DwOBhsRfN5xe8noGSfbXvMFAldCrQmNVLcmW6yY
-        jA7bGojScFZuLS6J+9bq7Jqk9O1xcS5KEOdcESuhfiNdao5bPlyaqV2RcopA
-        t4LiGcGNaLG8tzJoH1P7k7uBTWJsSXFr0BskyNQaQnjgXIMYuvFgH00k4Bds
-        Ex9uVasO8VoLV9IHnDjPszxL4CTNTHn6X+H8rNjuvL76DI7uRkBJh4ZDIEJw
-        iwnOuMQU1RFv/EkTq0w1uNIHirjJNqFd+PycMQlx4ytQIoX5Ug7D0A0Sl+uy
-        8FZk9JE5BZnGYuWxl9M9AmFjc6SOz4VumfPXoUoiSstucQ0aknLUtX1i4jKo
-        TAQjwQkPONc3SViHXCYHOIJlJdDchpZVBI6FWUY+J9s6kS7SdzokwzMcTeAT
-        IozG+P+IzlQK9evTnz08z8pkmEppdui6un14un+6T5ugPnzbB1ESVtXpW1QV
-        T/c49mNQJEeQPInhT/dTE6wuZdf+9rEbPv7cCxUMyyTOSYSjJFkEL+hTW7Ti
-        eSmeZdVazxEsDh4wWrtHQrxa57EKR7BuJbtnbMDx6wgB0dea8opAj6AvU0dj
-        lY5p3rHcaJLRrZQxdhx8tuNHJOTdRkkQ2CPhoDtzpnTPnRZfEqhavELKOnfa
-        +L0nI+DTVoXEL3lWZN0jPcX0pdrv2+RtvdsF++lT2GXx4z/JvLz8AUgPK/JJ
-        BgAA
-    http_version: 
-  recorded_at: Wed, 05 Jun 2013 14:27:19 GMT
+      string: "{\"data\":[{\"category\":\"Computers\\/technology\",\"name\":\"Billy Monk Mosaic Sandbox\",\"access_token\":\"access_token\",\"id\":\"page_id\",\"perms\":[\"ADMINISTER\",\"EDIT_PROFILE\",\"CREATE_CONTENT\",\"MODERATE_CONTENT\",\"CREATE_ADS\",\"BASIC_ADMIN\"]},{\"category\":\"Computers\\/technology\",\"category_list\":[{\"id\":\"2255\",\"name\":\"Computers\\/Technology\"}],\"name\":\"Mosaic (staging)\",\"access_token\":\"access_token\",\"id\":\"219979721356225\",\"perms\":[\"ADMINISTER\",\"EDIT_PROFILE\",\"CREATE_CONTENT\",\"MODERATE_CONTENT\",\"CREATE_ADS\",\"BASIC_ADMIN\"]},{\"category\":\"Computers\\/technology\",\"name\":\"Billy Monk Mosaic Sandbox Two\",\"access_token\":\"access_token\",\"id\":\"369685219790509\",\"perms\":[\"ADMINISTER\",\"EDIT_PROFILE\",\"CREATE_CONTENT\",\"MODERATE_CONTENT\",\"CREATE_ADS\",\"BASIC_ADMIN\"]}],\"paging\":{\"next\":\"https:\\/\\/graph.facebook.com\\/user_id\\/accounts?access_token=access_token&limit=5000&offset=5000&__after_id=369685219790509\"}}"
+    http_version:
+  recorded_at: Thu, 06 Jun 2013 18:17:22 GMT
 recorded_with: VCR 2.5.0

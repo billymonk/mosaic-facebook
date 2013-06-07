@@ -2,51 +2,49 @@
 http_interactions:
 - request:
     method: get
-    uri: https://graph.facebook.com/me?access_token=CAACEdEose0cBAI00iE8ReAjEEO29ALZANOdGnDqFJOWGZCmhTBMsPwZAdVWldJCyBWsEPw6PB89WcZBDUKrnvZBwZCUF4jMVgyglt78yN3cznF07yxU7t9yZAltXIeZBfZAhLRG6nSqtKdueCJO9I3FL8kXUwTFZBU5OoZD
+    uri: https://graph.facebook.com/me?access_token=access_token
     body:
       encoding: US-ASCII
-      string: ''
+      string: ""
     headers:
       User-Agent:
       - Faraday v0.8.7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Type:
       - application/json; charset=UTF-8
       Etag:
-      - ! '"8c1adf1e52523c2f2c9265fa7f1ae6d2e43e08b3"'
+      - "\"8c1adf1e52523c2f2c9265fa7f1ae6d2e43e08b3\""
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Last-Modified:
-      - '2013-05-10T14:45:03+0000'
+      - 2013-05-10T14:45:03+0000
       Pragma:
       - no-cache
       X-Fb-Rev:
-      - '835869'
+      - "837897"
       X-Fb-Debug:
-      - RSy6WMFHJv/RlmHFigmTD7wUmm7bNJQh/U0m792y7Pc=
+      - TiA7JJYoc0FZTOeFWiAeFrJqIfdva34XRvRzTxQPDoo=
       Date:
-      - Wed, 05 Jun 2013 14:27:20 GMT
+      - Thu, 06 Jun 2013 18:17:18 GMT
       Connection:
       - keep-alive
       Content-Length:
-      - '513'
+      - "513"
     body:
       encoding: US-ASCII
-      string: ! '{"id":"100000438239301","name":"Billy Monk","first_name":"Billy","last_name":"Monk","link":"http:\/\/www.facebook.com\/billy.monk.92","username":"billy.monk.92","hometown":{"id":"111948542155151","name":"San
-        Jose, California"},"location":{"id":"111948542155151","name":"San Jose, California"},"work":[{"employer":{"id":"27176049295","name":"Zoocasa,
-        Brokerage"},"start_date":"0000-00","end_date":"0000-00"}],"gender":"male","timezone":-4,"locale":"en_US","verified":true,"updated_time":"2013-05-10T14:45:03+0000"}'
-    http_version: 
-  recorded_at: Wed, 05 Jun 2013 14:27:18 GMT
+      string: "{\"id\":\"user_id\",\"name\":\"Billy Monk\",\"first_name\":\"Billy\",\"last_name\":\"Monk\",\"link\":\"http:\\/\\/www.facebook.com\\/billy.monk.92\",\"username\":\"billy.monk.92\",\"hometown\":{\"id\":\"111948542155151\",\"name\":\"San Jose, California\"},\"location\":{\"id\":\"111948542155151\",\"name\":\"San Jose, California\"},\"work\":[{\"employer\":{\"id\":\"27176049295\",\"name\":\"Zoocasa, Brokerage\"},\"start_date\":\"0000-00\",\"end_date\":\"0000-00\"}],\"gender\":\"male\",\"timezone\":-4,\"locale\":\"en_US\",\"verified\":true,\"updated_time\":\"2013-05-10T14:45:03+0000\"}"
+    http_version:
+  recorded_at: Thu, 06 Jun 2013 18:17:22 GMT
 recorded_with: VCR 2.5.0

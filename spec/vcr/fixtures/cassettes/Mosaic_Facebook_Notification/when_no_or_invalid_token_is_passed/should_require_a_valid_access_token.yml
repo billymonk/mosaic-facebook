@@ -2,24 +2,24 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.facebook.com/method/notifications.sendEmail?access_token=xxx&recipients=100000438239301&subject=testing&text=ajit
+    uri: https://api.facebook.com/method/notifications.sendEmail?access_token=xxx&recipients=user_id&subject=testing&text=ajit
     body:
       encoding: US-ASCII
-      string: ''
+      string: ""
     headers:
       User-Agent:
       - Faraday v0.8.7
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Type:
@@ -29,27 +29,46 @@ http_interactions:
       Pragma:
       - no-cache
       X-Fb-Rev:
-      - '835869'
+      - "837897"
       X-Fb-Debug:
-      - gGNGYn8op3nSVsJV8c8DCyrGxXkLPKA0cZ4lqgl6d4w=
+      - Aw34ENB7buTVhWwe5GavgpHhlsAuEF8Tp8TJdB6vEH4=
       Date:
-      - Wed, 05 Jun 2013 14:27:14 GMT
+      - Thu, 06 Jun 2013 18:17:13 GMT
       Connection:
       - keep-alive
       Content-Length:
-      - '783'
+      - "783"
     body:
       encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<error_response xmlns=\"http://api.facebook.com/1.0/\"
-        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://api.facebook.com/1.0/
-        http://api.facebook.com/1.0/facebook.xsd\">\n  <error_code>190</error_code>\n
-        \ <error_msg>Invalid OAuth access token.</error_msg>\n  <request_args list=\"true\">\n
-        \   <arg>\n      <key>method</key>\n      <value>notifications.sendEmail</value>\n
-        \   </arg>\n    <arg>\n      <key>access_token</key>\n      <value>xxx</value>\n
-        \   </arg>\n    <arg>\n      <key>recipients</key>\n      <value>100000438239301</value>\n
-        \   </arg>\n    <arg>\n      <key>subject</key>\n      <value>testing</value>\n
-        \   </arg>\n    <arg>\n      <key>text</key>\n      <value>ajit</value>\n
-        \   </arg>\n  </request_args>\n</error_response>\n"
-    http_version: 
-  recorded_at: Wed, 05 Jun 2013 14:27:12 GMT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <error_response xmlns="http://api.facebook.com/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://api.facebook.com/1.0/ http://api.facebook.com/1.0/facebook.xsd">
+          <error_code>190</error_code>
+          <error_msg>Invalid OAuth access token.</error_msg>
+          <request_args list="true">
+            <arg>
+              <key>method</key>
+              <value>notifications.sendEmail</value>
+            </arg>
+            <arg>
+              <key>access_token</key>
+              <value>xxx</value>
+            </arg>
+            <arg>
+              <key>recipients</key>
+              <value>user_id</value>
+            </arg>
+            <arg>
+              <key>subject</key>
+              <value>testing</value>
+            </arg>
+            <arg>
+              <key>text</key>
+              <value>ajit</value>
+            </arg>
+          </request_args>
+        </error_response>
+
+    http_version:
+  recorded_at: Thu, 06 Jun 2013 18:17:16 GMT
 recorded_with: VCR 2.5.0
