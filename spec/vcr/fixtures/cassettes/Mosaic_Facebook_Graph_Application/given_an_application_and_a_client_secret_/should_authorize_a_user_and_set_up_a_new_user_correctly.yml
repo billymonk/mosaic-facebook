@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/oauth/access_token?access_token&client_id=app_id&client_secret=app_secret&code=oauth_code&redirect_uri=http://example.com/
+    body:
+      encoding: US-ASCII
+      string: ""
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - "838871"
+      X-Fb-Debug:
+      - vBO8G1qAu9ENHKz7ozL7XA4sZv0urj1Q1T8elVsSdwE=
+      Date:
+      - Fri, 07 Jun 2013 14:13:47 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - "175"
+    body:
+      encoding: US-ASCII
+      string: access_token=access_token&expires=5183557
+    http_version:
+  recorded_at: Fri, 07 Jun 2013 14:13:47 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=access_token
+    body:
+      encoding: US-ASCII
+      string: ""
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - "\"675e6d6db0e49a2155425d095dcb2b67cf858a74\""
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Last-Modified:
+      - 2013-06-07T14:06:09+0000
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - "838871"
+      X-Fb-Debug:
+      - uKnCCYQvwhgZ9t0Z7KjeiJO1KXbGgzo/dur32opZQeI=
+      Date:
+      - Fri, 07 Jun 2013 14:13:47 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - "1271"
+    body:
+      encoding: ASCII-8BIT
+      string: "{\"id\":\"user_id\",\"name\":\"Example User\",\"first_name\":\"Example\",\"last_name\":\"User\",\"link\":\"http:\\/\\/www.facebook.com\\/example.user\",\"username\":\"example.user\",\"hometown\":{\"id\":\"1234\",\"name\":\"Exampletown, ExampleState\"},\"location\":{\"id\":\"1\",\"name\":\"Exampleville, ExampleState\"},\"quotes\":\"Bananas are fun\",\"sports\":[{\"id\":\"112636102085435\",\"name\":\"Climbing\"}],\"favorite_teams\":[{\"id\":\"20669912712\",\"name\":\"Arsenal\"}],\"gender\":\"male\",\"political\":\"Test\",\"timezone\":-4,\"locale\":\"en_GB\",\"verified\":true,\"updated_time\":\"2013-06-07T14:06:09+0000\"}"
+    http_version:
+  recorded_at: Fri, 07 Jun 2013 14:13:47 GMT
+recorded_with: VCR 2.5.0

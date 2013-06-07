@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/user_id/likes/12345?access_token=access_token
+    body:
+      encoding: US-ASCII
+      string: ""
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - "\"1050253aec7b29caff644806927dabfa81406eee\""
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - "838871"
+      X-Fb-Debug:
+      - 0PHFSxOFj//yDt2qK7lVGH0q3LiQTTPAeylBrEutoVM=
+      Date:
+      - Fri, 07 Jun 2013 14:45:22 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - "11"
+    body:
+      encoding: US-ASCII
+      string: "{\"data\":[]}"
+    http_version:
+  recorded_at: Fri, 07 Jun 2013 14:45:22 GMT
+recorded_with: VCR 2.5.0

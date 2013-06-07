@@ -31,5 +31,15 @@ describe Mosaic::Facebook::Graph::Application, :vcr do
       # TODO: add subscription to test?
       # expect(subscriptions.first).to be_an_instance_of Mosaic::Facebook::Graph::Subscription
     end
+
+    it "should authorize a user and set up a new user correctly" do
+      user = @application.authorize(Rspec.configuration.oauth_code, Rspec.configuration.oauth_redirect_url)
+      expect(user).to be_an_instance_of(Mosaic::Facebook::Graph::User)
+      user.oauth_token.should eql("access_token")
+      user.oauth_token_expiry.should eql("5183557")
+      user.name.should eql("Example User")
+      user
+    end
+
   end
 end

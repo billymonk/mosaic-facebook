@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/user_id/likes/page_id?access_token=access_token
+    body:
+      encoding: US-ASCII
+      string: ""
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - "\"e77a3ce2fc8074e347d8a7ff6646012a0f6b7b75\""
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - "838871"
+      X-Fb-Debug:
+      - k5iJR2mDZHy/j2TVyVeEToH69Y9fslqeeNdx5y6bXjM=
+      Date:
+      - Fri, 07 Jun 2013 14:45:22 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - "452"
+    body:
+      encoding: US-ASCII
+      string: "{\"data\":[{\"category\":\"Internet\\/software\",\"name\":\"Sandbox\",\"id\":\"page_id\",\"created_time\":\"2013-06-07T14:45:08+0000\"}],\"paging\":{\"next\":\"https:\\/\\/graph.facebook.com\\/user_id\\/likes?target_id=page_id&access_token=oauth_token&limit=5000&offset=5000&__after_id=page_id\"}}"
+    http_version:
+  recorded_at: Fri, 07 Jun 2013 14:45:21 GMT
+recorded_with: VCR 2.5.0
