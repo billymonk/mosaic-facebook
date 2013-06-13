@@ -2,7 +2,7 @@ module Mosaic
   module Facebook
     module Graph
       class Post < Mosaic::Facebook::Graph::GraphObject
-        attr_accessor :id, :created_time, :to, :message, :type, :link, :picture, :updated_time
+        attr_accessor :id, :created_time, :to, :message, :type, :link, :picture, :updated_time, :source
 
         def comments
           if @comments.is_a?(Hash)
