@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/billymonk/mosaic-facebook.png?branch=feature/add_travis_ci)](https://travis-ci.org/billymonk/mosaic-facebook)
+
 #Mosaic Facebook API gem
 
 This gem is designed to make integrating a Facebook application easy into your ruby program.
