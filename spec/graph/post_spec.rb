@@ -1,6 +1,15 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe Mosaic::Facebook::Graph::Post, :vcr do
+
+  context "when searching for a post" do
+    it "should return a list of posts" do
+      posts = Mosaic::Facebook::Graph::Post.search("mosaic", :access_token => RSpec.configuration.access_token)
+      expect(posts).to_not be_empty
+      expect(posts.first).to be_an_instance_of(Mosaic::Facebook::Graph::Post)
+    end
+  end
+
   context "given a page with posts" do
     before(:all) do
       @page = Mosaic::Facebook::Graph::Page.new(:id => RSpec.configuration.page_id)

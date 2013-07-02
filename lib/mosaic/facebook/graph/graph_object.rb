@@ -38,6 +38,10 @@ module Mosaic
             end
           end
 
+          def search(query, options = {})
+            find("/search?q=#{URI.escape(query)}&type=#{self.name.split('::').last.downcase}", options)
+          end
+
           def find_by_id(id, options = {})
             find("/#{id}", options)
           end
