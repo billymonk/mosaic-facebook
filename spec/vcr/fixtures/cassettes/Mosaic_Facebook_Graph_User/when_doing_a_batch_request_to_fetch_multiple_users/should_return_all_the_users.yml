@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graph.facebook.com/
+    body:
+      encoding: US-ASCII
+      string: batch=%5B%7B%22method%22%3A%22GET%22%2C%22relative_url%22%3A%22%2F324810477646572%22%7D%2C%7B%22method%22%3A%22GET%22%2C%22relative_url%22%3A%22%2F347440773449%22%7D%2C%7B%22method%22%3A%22GET%22%2C%22relative_url%22%3A%22%2F100001080399491%22%7D%5D&access_token=access_token
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - "893914"
+      X-Fb-Debug:
+      - b9t+m99CIqaDQWHHD6bUsSfZFGr3H3G3PeP6p1o/xko=
+      Date:
+      - Wed, 31 Jul 2013 18:40:50 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - "3223"
+    body:
+      encoding: US-ASCII
+      string: "[{\"code\":200,\"headers\":[{\"name\":\"Access-Control-Allow-Origin\",\"value\":\"*\"},{\"name\":\"Cache-Control\",\"value\":\"private, no-cache, no-store, must-revalidate\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Content-Type\",\"value\":\"text\\/javascript; charset=UTF-8\"},{\"name\":\"ETag\",\"value\":\"\\\"62323b4ce6406dcb321420778cc58c47640290a2\\\"\"},{\"name\":\"Expires\",\"value\":\"Sat, 01 Jan 2000 00:00:00 GMT\"},{\"name\":\"Pragma\",\"value\":\"no-cache\"}],\"body\":\"{\\\"about\\\":\\\"if u want to post anonymously than click on the link\\\\nhttps:\\\\\\/\\\\\\/docs.google.com\\\\\\/forms\\\\\\/d\\\\\\/19ohfGqSoWuzds64aRwBOxsl79jiXYz9Jk_EMbK3DG_k\\\\\\/viewform\\\",\\\"category\\\":\\\"Education\\\",\\\"is_published\\\":true,\\\"talking_about_count\\\":36,\\\"username\\\":\\\"akashInstitutepitampuraconfessions\\\",\\\"were_here_count\\\":0,\\\"id\\\":\\\"324810477646572\\\",\\\"name\\\":\\\"Akash institute Pitampura Confessions\\\",\\\"link\\\":\\\"http:\\\\\\/\\\\\\/www.facebook.com\\\\\\/akashInstitutepitampuraconfessions\\\",\\\"likes\\\":134,\\\"cover\\\":{\\\"cover_id\\\":344971208963832,\\\"source\\\":\\\"http:\\\\\\/\\\\\\/sphotos-c.ak.fbcdn.net\\\\\\/hphotos-ak-prn1\\\\\\/1017588_344971208963832_1487159502_n.jpg\\\",\\\"offset_y\\\":25,\\\"offset_x\\\":0}}\"},{\"code\":200,\"headers\":[{\"name\":\"Access-Control-Allow-Origin\",\"value\":\"*\"},{\"name\":\"Cache-Control\",\"value\":\"private, no-cache, no-store, must-revalidate\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Content-Type\",\"value\":\"text\\/javascript; charset=UTF-8\"},{\"name\":\"ETag\",\"value\":\"\\\"0f47015394a6d000a6adaa8a8e06090eceb98833\\\"\"},{\"name\":\"Expires\",\"value\":\"Sat, 01 Jan 2000 00:00:00 GMT\"},{\"name\":\"Pragma\",\"value\":\"no-cache\"}],\"body\":\"{\\\"about\\\":\\\"The official facebook page for http:\\\\\\/\\\\\\/absolutelygospel.com\\\\\\/ . We are the first online magazine covering Southern Gospel Music. We promote music that is Absolutely Gospel. \\\\n \\\\\\\"Where The Fan Has A Voice\\\\\\\"\\\\n\\\",\\\"can_post\\\":true,\\\"category\\\":\\\"Magazine\\\",\\\"founded\\\":\\\"1995\\\",\\\"genre\\\":\\\"Southern Gospel Music\\\",\\\"hometown\\\":\\\"Murfreeesboro, TN\\\",\\\"is_published\\\":true,\\\"talking_about_count\\\":1569,\\\"username\\\":\\\"absolutelygospel\\\",\\\"website\\\":\\\"http:\\\\\\/\\\\\\/absolutelygospel.com\\\",\\\"were_here_count\\\":0,\\\"id\\\":\\\"347440773449\\\",\\\"name\\\":\\\"Absolutely Gospel Music\\\",\\\"link\\\":\\\"http:\\\\\\/\\\\\\/www.facebook.com\\\\\\/absolutelygospel\\\",\\\"likes\\\":5732,\\\"cover\\\":{\\\"cover_id\\\":\\\"10151556344838450\\\",\\\"source\\\":\\\"http:\\\\\\/\\\\\\/sphotos-d.ak.fbcdn.net\\\\\\/hphotos-ak-frc1\\\\\\/s720x720\\\\\\/1003305_10151556344838450_2061854644_n.jpg\\\",\\\"offset_y\\\":29,\\\"offset_x\\\":0}}\"},{\"code\":200,\"headers\":[{\"name\":\"Access-Control-Allow-Origin\",\"value\":\"*\"},{\"name\":\"Cache-Control\",\"value\":\"private, no-cache, no-store, must-revalidate\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Content-Type\",\"value\":\"text\\/javascript; charset=UTF-8\"},{\"name\":\"ETag\",\"value\":\"\\\"15cb1bd45c98543d1acb8c88fc8540eef0c5161e\\\"\"},{\"name\":\"Expires\",\"value\":\"Sat, 01 Jan 2000 00:00:00 GMT\"},{\"name\":\"Last-Modified\",\"value\":\"2013-07-10T01:02:12+0000\"},{\"name\":\"Pragma\",\"value\":\"no-cache\"}],\"body\":\"{\\\"id\\\":\\\"100001080399491\\\",\\\"name\\\":\\\"Zipporah Abarca\\\",\\\"first_name\\\":\\\"Zipporah\\\",\\\"last_name\\\":\\\"Abarca\\\",\\\"link\\\":\\\"http:\\\\\\/\\\\\\/www.facebook.com\\\\\\/zipporah.abarca\\\",\\\"username\\\":\\\"zipporah.abarca\\\",\\\"gender\\\":\\\"female\\\",\\\"locale\\\":\\\"en_US\\\",\\\"updated_time\\\":\\\"2013-07-10T01:02:12+0000\\\"}\"}]"
+    http_version:
+  recorded_at: Wed, 31 Jul 2013 18:40:51 GMT
+recorded_with: VCR 2.5.0
