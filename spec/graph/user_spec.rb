@@ -14,6 +14,15 @@ describe Mosaic::Facebook::Graph::User, :vcr do
     end
   end
 
+  context "when doing a batch request to fetch multiple users" do
+    it "should return all the users" do
+      users = Mosaic::Facebook::Graph::User.find_by_ids([324810477646572, 347440773449, 100001080399491], :access_token => RSpec.configuration.access_token)
+      users.each do |user|
+        expect(user).to be_an_instance_of Mosaic::Facebook::Graph::User
+      end
+    end
+  end
+
   context "given a valid user" do
     before(:all) do
       @me = Mosaic::Facebook::Graph::User.new(:id => 'me')

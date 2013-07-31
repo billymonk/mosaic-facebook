@@ -1,3 +1,4 @@
+require 'json' #needed for faraday to serialize objects for the post requests
 require 'mosaic/facebook/graph/association_proxy'
 require 'mosaic/facebook/graph/graph_object'
 require 'mosaic/facebook/graph/account'

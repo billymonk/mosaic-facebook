@@ -38,12 +38,31 @@ module Mosaic
             end
           end
 
+          def batch(paths = [], options = {})
+            uris = paths.map{|path| {'method' => 'GET', 'relative_url' => path}}
+            conn = new.send(:instance_variable_get, :@conn)
+            response = conn.post base_uri, {:batch => uris.to_json, :access_token => facebook_access_token}.merge(options)
+            raise Mosaic::Facebook::Error.new(response.body['error']) if !response.success?
+            data = response.body
+            data.map do |datum|
+              if datum.include?('data')
+              datum['data'].collect { |attributes| new(attributes) }
+              else
+                new(JSON.parse(datum['body']))
+              end
+            end
+          end
+
           def search(query, options = {})
             find("/search?q=#{URI.escape(query)}&type=#{self.name.split('::').last.downcase}", options)
           end
 
           def find_by_id(id, options = {})
             find("/#{id}", options)
+          end
+
+          def find_by_ids(ids, options = {})
+            batch(ids.map{|i|"/#{i}"}, options)
           end
         end
 
